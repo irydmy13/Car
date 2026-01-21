@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Car.ApplicationServices/Car.ApplicationServices.csproj" />
+  <Project Path="Car.Core/Car.Core.csproj" />
+  <Project Path="Car.Data/Car.Data.csproj" />
+  <Project Path="Car.Web/Car.Web.csproj" />
+</Solution>
