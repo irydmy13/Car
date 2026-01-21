@@ -8,11 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Register DbContext (Подключение базы)
+// Register DbContext
 builder.Services.AddDbContext<CarDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register Application Services (Регистрация наших сервисов)
+// Register Application Services
 builder.Services.AddScoped<ICarServices, CarServices>();
 
 var app = builder.Build();
@@ -26,7 +26,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Важно для .NET 8: подключаем статические файлы (картинки, CSS)
 app.UseStaticFiles();
 
 app.UseRouting();
