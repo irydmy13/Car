@@ -1,7 +1,0 @@
-<Solution>
-  <Project Path="Car.ApplicationServices/Car.ApplicationServices.csproj" />
-  <Project Path="Car.Core/Car.Core.csproj" />
-  <Project Path="Car.Data/Car.Data.csproj" />
-  <Project Path="Car.Tests/Car.Tests.csproj" Id="42bfc948-66c4-4865-b54c-555ef83c252f" />
-  <Project Path="Car.Web/Car.Web.csproj" />
-</Solution>
