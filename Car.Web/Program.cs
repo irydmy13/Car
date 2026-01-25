@@ -7,17 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-if (builder.Environment.IsDevelopment())
-{
-    builder.Services.AddDbContext<CarDbContext>(options =>
-        options.UseInMemoryDatabase("CarDb"));
-}
-else
-{
-    builder.Services.AddDbContext<CarDbContext>(options =>
-        options.UseSqlServer(
-            builder.Configuration.GetConnectionString("DefaultConnection")));
-}
+builder.Services.AddDbContext<CarDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<ICarServices, CarServices>();
 
